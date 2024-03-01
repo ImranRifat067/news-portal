@@ -17,7 +17,7 @@ const selectCategory = async () => {
     });
 }
 
-const loadNews = async(catId) => {
+const loadNews = async(catId = '04') => {
     console.log(catId);
     const response = await fetch(`https://openapi.programming-hero.com/api/news/category/${catId}`);
     const data = await response.json();
@@ -70,5 +70,5 @@ const loadNews = async(catId) => {
     })
 }
 
-// loadNews();
+loadNews();
 selectCategory();
